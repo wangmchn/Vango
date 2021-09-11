@@ -7,6 +7,8 @@
 //
 
 #import "VGViewController.h"
+#import <Vango/VGSharedInfoSet.h>
+#import "VGTestObj.h"
 
 @interface VGViewController ()
 
@@ -18,6 +20,27 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    [self testHundredObjectsInitialKVOTimeCost];
+}
+
+- (void)testHundredObjectsInitialKVOTimeCost {
+    NSMutableArray *observers = [NSMutableArray array];
+    for (int i = 0; i < 100; i++) {
+        [observers addObject:[NSObject new]];
+    }
+    CFTimeInterval begin = CACurrentMediaTime();
+    VGSharedInfoSet *sharedInfoSet = [[VGSharedInfoSet alloc] init];
+    VGTestObj *obj = [[VGTestObj alloc] init];
+    obj.name = @"1";
+    __block NSString *string = nil;
+    [observers enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        sharedInfoSet.react(VGTestObj.class).subscribe(@"name", obj, ^(id  _Nonnull observer, VGTestObj * _Nonnull object, NSDictionary<NSString *,id> * _Nonnull change) {
+            string = object.name.copy;
+        });
+    }];
+    [sharedInfoSet addObject:obj];
+    CFTimeInterval diff = CACurrentMediaTime() - begin;
+    NSLog(@"cost: %@ms", @(diff * 1000));
 }
 
 - (void)didReceiveMemoryWarning

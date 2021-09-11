@@ -1,0 +1,31 @@
+PODS:
+  - Expecta (1.0.6)
+  - KVOController (1.2.0)
+  - Specta (1.0.7)
+  - Vango (0.1.0):
+    - KVOController
+
+DEPENDENCIES:
+  - Expecta
+  - Specta
+  - Vango (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - Expecta
+    - KVOController
+    - Specta
+
+EXTERNAL SOURCES:
+  Vango:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Expecta: 3b6bd90a64b9a1dcb0b70aa0e10a7f8f631667d5
+  KVOController: d72ace34afea42468329623b3379ab3cd1d286b6
+  Specta: 3e1bd89c3517421982dc4d1c992503e48bd5fe66
+  Vango: 32062b65603a75857c9f81225ce82b326925e7d5
+
+PODFILE CHECKSUM: e27eb864e6884d598f889e4ad5a048e509726c53
+
+COCOAPODS: 1.10.0

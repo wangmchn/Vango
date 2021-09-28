@@ -9,6 +9,14 @@
 
 @implementation VGReceiver
 
+- (instancetype)initWithSharedInfos:(VGSharedInfoSet *)sharedInfos {
+    self = [super init];
+    if (self) {
+        _sharedInfos = sharedInfos;
+    }
+    return self;
+}
+
 - (void)bindPlugin:(VGPlugin *)plugin {
     _plugin = plugin;
 }

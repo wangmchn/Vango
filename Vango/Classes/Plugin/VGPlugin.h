@@ -11,6 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef id VGNotExist;
 /// A plugin is module which can handle events, and send events if something happens to notify other plugins.
 @interface VGPlugin <__covariant DataSourceType: id, __covariant ReceiverType: VGReceiver *, __covariant SenderType: VGSender *> : NSObject
 /// The receiver is a part of the plugin which can receive events send by other plugins. and then drive plugin react.
@@ -20,7 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// The datasource which provider datas the plugin need
 @property (nonatomic, weak, readonly) DataSourceType dataSource;
 
-/// Initializer methods.
+/// Initializer method.
 /// @param receiver The customized receiver handle events
 /// @param sender The event bus which can post events to other receivers
 - (instancetype)initWithReceiver:(ReceiverType)receiver sender:(SenderType)sender NS_DESIGNATED_INITIALIZER;

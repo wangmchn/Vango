@@ -9,7 +9,12 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface VGPluginAssembly : NSObject
+@interface VGPluginAssembly <__covariant CoreType> : NSObject
+
+@property (nonatomic, strong, nullable, readonly) CoreType core;
+
+- (void)inject:(CoreType)core;
+- (void)remove:(CoreType)core;
 
 @end
 

@@ -7,6 +7,24 @@
 
 #import "VGPluginAssembly.h"
 
-@implementation VGPluginAssembly
+@implementation VGPluginAssembly {
+    VGConfiguration *_configuration;
+}
+
+- (instancetype)initWithConfiguration:(VGConfiguration *)configuration {
+    self = [super init];
+    if (self) {
+        
+    }
+    return self;
+}
+
+- (void)inject:(id)core {
+    
+}
+
+- (void)remove:(id)core {
+    
+}
 
 @end

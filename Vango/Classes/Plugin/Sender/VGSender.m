@@ -48,6 +48,7 @@
 }
 
 - (BOOL)conformsToProtocol:(Protocol *)aProtocol {
+    // TODO: 增加缓存
     NSArray<VGReceiver *> *allReceivers = self.receivers.allObjects;
     for (VGReceiver *receiver in allReceivers) {
         if ([receiver conformsToProtocol:aProtocol]) {

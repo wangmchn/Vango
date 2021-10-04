@@ -6,15 +6,23 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "VGConfiguration.h"
+#import "VGPlugin.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface VGPluginAssembly <__covariant CoreType> : NSObject
+@interface VGPluginAssembly <__covariant CoreType, __covariant bridgePluginType: VGPlugin *> : NSObject
 
 @property (nonatomic, strong, nullable, readonly) CoreType core;
 
+@property (nonatomic, strong, nullable, readonly) bridgePluginType bridgePlugin;
+
 - (void)inject:(CoreType)core;
 - (void)remove:(CoreType)core;
+
+- (instancetype)initWithConfiguration:(VGConfiguration *)configuration NS_DESIGNATED_INITIALIZER;
+- (instancetype)init NS_UNAVAILABLE;
++ (instancetype)new NS_UNAVAILABLE;
 
 @end
 

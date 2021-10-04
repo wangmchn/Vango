@@ -9,4 +9,20 @@
 
 @implementation VGLayout
 
+- (void)install:(UIView *)view {
+    
+}
+
+- (void)uninstall:(UIView *)view {
+    
+}
+
+- (instancetype)initWithRootView:(UIView *)rootView {
+    self = [super init];
+    if (self) {
+        _rootView = rootView;
+    }
+    return self;
+}
+
 @end

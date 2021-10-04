@@ -9,10 +9,15 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface VGLayout : NSObject
+@interface VGLayout <__covariant VGUIComponent: UIView *> : NSObject
+@property (nonatomic, strong, readonly) UIView *rootView;
 
-- (void)install:(UIView *)view;
-- (void)uninstall:(UIView *)view;
+- (void)install:(VGUIComponent)component;
+- (void)uninstall:(VGUIComponent)component;
+
+- (instancetype)initWithRootView:(UIView *)rootView NS_DESIGNATED_INITIALIZER;
+- (instancetype)init NS_UNAVAILABLE;
++ (instancetype)new NS_UNAVAILABLE;
 
 @end
 

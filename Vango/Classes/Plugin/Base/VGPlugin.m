@@ -9,10 +9,9 @@
 
 @implementation VGPlugin
 
-- (instancetype)initWithReceiver:(VGReceiver *)receiver sender:(VGSender *)sender {
+- (instancetype)initWithSender:(VGSender *)sender {
     self = [super init];
     if (self) {
-        _receiver = receiver;
         _sender = sender;
     }
     return self;

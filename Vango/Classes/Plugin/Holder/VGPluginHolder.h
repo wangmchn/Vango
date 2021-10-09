@@ -6,11 +6,17 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "VGPlugin.h"
+#import "VGReceiver.h"
+#import "VGLinkable.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface VGPluginHolder : NSObject
+@interface VGPluginHolder : NSObject <VGLinkable>
 
+- (instancetype)initWithPlugin:(VGPlugin *)plugin;
+
+- (void)updateReceiver:(__kindof VGReceiver *)receiver;
 
 @end
 

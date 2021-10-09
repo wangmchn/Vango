@@ -7,11 +7,11 @@
 
 #import <Foundation/Foundation.h>
 #import "VGConfiguration.h"
-#import "VGPlugin.h"
+#import "VGPluginHolder.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface VGPluginAssembly <__covariant CoreType, __covariant bridgePluginType: VGPlugin *> : NSObject
+@interface VGPluginAssembly <__covariant CoreType, __covariant bridgePluginType: VGPluginHolder *> : NSObject
 
 @property (nonatomic, strong, nullable, readonly) CoreType core;
 

@@ -6,20 +6,33 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "VGPlugin.h"
+#import "VGLinkable.h"
+#import "VGLayout.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface VGConfiguration : NSObject
-/// 核心插件，用于处理核心模块，维护核心模块的逻辑，返回的 Class 必须是 VGCorePlugin 子类
-@property (nonatomic, readonly) Class corePluginClass;
+#define VGPairPlugin(pluginCls, receiverCls) [VGPluginPair pairWithPluginClass:pluginCls.class receiverClass:receiverCls.class]
+
+@interface VGPluginPair : NSObject
 /// 插件的配置，返回的 Class 必须是 VGPlugin 的子类
-@property (nonatomic, readonly) NSArray<Class> *pluginClasses;
-/// VGLayout 的子类，用于布局组件的各个视图，需要业务定制
-@property (nonatomic, readonly) Class layoutClass;
-/// 跟组件通信的业务 plugin
-/// @discussion 比如页面需要获取组件内部的状态（sharedInfo），或者需要通知事件到内部的各个插件的 receiver，都需要通过这个 plugin 来处理
-@property (nonatomic, readonly, nullable) __kindof VGPlugin *bridgePlugin;
+@property (nonatomic, strong, readonly) Class pluginClass;
+/// 插件的配置，返回的 Class 必须是 VGReceiver 的子类
+@property (nonatomic, strong, readonly) Class receiverClass;
+
+- (instancetype)initWithPluginClass:(Class)pluginClass
+                      receiverClass:(Class)receiverClass NS_DESIGNATED_INITIALIZER;
++ (instancetype)pairWithPluginClass:(Class)pluginClass
+                      receiverClass:(Class)receiverClass;
+- (instancetype)init NS_UNAVAILABLE;
++ (instancetype)new NS_UNAVAILABLE;
+
+@end
+
+@interface VGConfiguration : NSObject
+/// 核心插件，用于处理核心模块，维护核心模块的逻辑，返回的 pluginClass 必须是 VGCorePlugin 子类
+@property (nonatomic, assign) VGPluginPair *corePair;
+/// 插件配置列表
+@property (nonatomic, strong) NSArray<VGPluginPair *> *pluginPairs;
 
 @end
 

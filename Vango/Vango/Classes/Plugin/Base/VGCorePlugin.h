@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface VGCorePlugin <__covariant DataSourceType: id, __covariant SenderType: VGSender *, __covariant CoreType: id> : VGPlugin <DataSourceType, SenderType>
+@interface VGCorePlugin <__covariant DataSourceType: id, __covariant SenderType: VGSender *, __covariant LayoutType: VGLayout *, __covariant CoreType: id> : VGPlugin <DataSourceType, SenderType, LayoutType>
 
 @property (nonatomic, strong, nullable, readonly) CoreType core;
 

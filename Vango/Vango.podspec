@@ -36,7 +36,6 @@ TODO: Add long description of the pod here.
   #   'Vango' => ['Vango/Assets/*.png']
   # }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
+  s.private_header_files = 'Vango/**/*+Private.h'
   s.dependency 'KVOController'
 end

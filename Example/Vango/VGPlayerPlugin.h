@@ -13,7 +13,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface VGPlayerPlugin : VGCorePlugin <id<VGVideoInfo>, VGSender<VGPlayerEvents> *, AVPlayer *>
+@interface VGPlayerPlugin : VGCorePlugin <id<VGVideoInfo>, VGSender<VGPlayerEvents> *, VGLayout *, AVPlayer *>
 
 @end
 

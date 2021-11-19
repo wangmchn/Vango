@@ -57,12 +57,10 @@
 }
 
 - (void)inject:(id)core {
-    _core = core;
     [_corePluginHolder.plugin inject:core];
 }
 
 - (void)remove:(id)core {
-    _core = nil;
     [_corePluginHolder.plugin remove:core];
 }
 

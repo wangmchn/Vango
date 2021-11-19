@@ -360,11 +360,13 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Vango_Example/Pods-Vango_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/KVOController/KVOController.framework",
+				"${BUILT_PRODUCTS_DIR}/VGPlayerKit/VGPlayerKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Vango/Vango.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KVOController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/VGPlayerKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Vango.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,10 +9,10 @@
 
 @implementation VGPlugin
 
-- (instancetype)initWithSender:(VGSender *)sender {
+- (instancetype)initWithLayout:(VGLayout *)layout {
     self = [super init];
     if (self) {
-        _sender = sender;
+        _layout = layout;
     }
     return self;
 }

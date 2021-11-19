@@ -3,7 +3,8 @@ use_frameworks!
 platform :ios, '9.0'
 
 target 'Vango_Example' do
-  pod 'Vango', :path => '../'
+  pod 'Vango', :path => '../Vango'
+  pod 'VGPlayerKit', :path => '../VGPlayerKit'
 
   target 'Vango_Tests' do
     inherit! :search_paths

@@ -11,6 +11,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface VGPlayerLayout : VGLayout
 
+- (void)installVideoView:(UIView *)videoView;
+- (void)uninstallVideoView:(UIView *)videoView;
+
 @end
 
 NS_ASSUME_NONNULL_END

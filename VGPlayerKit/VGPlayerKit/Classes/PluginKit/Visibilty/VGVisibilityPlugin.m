@@ -29,6 +29,7 @@
 
 @interface VGVisibilityPlugin () <VGVisibilityMonitorDelegate>
 @property (nonatomic, strong) VGVisibilityInfo *visibilityInfo;
+@property (nonatomic, assign) NSInteger sentinel;
 @end
 
 @implementation VGVisibilityPlugin
@@ -64,7 +65,12 @@
     /// 这里之所以要 dispatch_async 是为了过滤以下情况：
     /// [rootView removeFromeSuperView];
     /// [anotherView addSubview:rootView];
+    /// 同一个 runloop 内的 remove/add 逻辑会被过滤
+    NSInteger sentinel = ++self.sentinel;
     dispatch_async(dispatch_get_main_queue(), ^{
+        if (sentinel == self.sentinel) {
+            return;
+        }
         self.visibilityInfo.isOnViewTree = self.layout.rootView.window;
     });
 }

@@ -25,6 +25,7 @@
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		BD0847CB314BFD730AA1B6B7 /* Pods_Vango_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38ED16E41B35BB508D1664B8 /* Pods_Vango_Example.framework */; };
 		C954C9717C0A98EA995D3A60 /* Pods_Vango_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E69F2C62DAC3EE9A2A5123A2 /* Pods_Vango_Tests.framework */; };
+		CF639BF02768D78100FC5C2D /* VGReceiverTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF639BEF2768D78100FC5C2D /* VGReceiverTests.m */; };
 		CFDEA7E1270AA301009AE10A /* VGPlayerPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = CFDEA7E0270AA301009AE10A /* VGPlayerPlugin.m */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +69,7 @@
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A06D22956C148F79F6C69754 /* Vango.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Vango.podspec; path = ../Vango.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		C6417F37C020CF3A22E275D5 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		CF639BEF2768D78100FC5C2D /* VGReceiverTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VGReceiverTests.m; sourceTree = "<group>"; };
 		CFDEA7DF270AA301009AE10A /* VGPlayerPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VGPlayerPlugin.h; sourceTree = "<group>"; };
 		CFDEA7E0270AA301009AE10A /* VGPlayerPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VGPlayerPlugin.m; sourceTree = "<group>"; };
 		CFDEA7E4270AA3DB009AE10A /* VGVideoInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VGVideoInfo.h; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				4D78286326EA265500A52244 /* VGSharedInfoTests.m */,
+				CF639BEF2768D78100FC5C2D /* VGReceiverTests.m */,
 				6003F5B6195388D20070C39A /* Supporting Files */,
 			);
 			path = Tests;
@@ -416,6 +419,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D78286426EA265500A52244 /* VGSharedInfoTests.m in Sources */,
+				CF639BF02768D78100FC5C2D /* VGReceiverTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -6,7 +6,6 @@
 //
 
 #import "VGReceiver.h"
-#import "VGReceiver+Private.h"
 
 @implementation VGReceiver
 

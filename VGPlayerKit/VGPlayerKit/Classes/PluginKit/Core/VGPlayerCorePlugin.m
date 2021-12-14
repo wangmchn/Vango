@@ -7,7 +7,7 @@
 
 #import "VGPlayerCorePlugin.h"
 
-@interface VGPlayerCorePlugin ()
+@interface VGPlayerCorePlugin () <VGPlayerDelegate>
 
 @end
 

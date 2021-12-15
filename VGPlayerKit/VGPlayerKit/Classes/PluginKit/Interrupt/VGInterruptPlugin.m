@@ -25,6 +25,11 @@
     [self interruptTypesDidChange];
 }
 
+- (void)reset {
+    [self.interruptTypes removeAllIndexes];
+    [self interruptTypesDidChange];
+}
+
 - (void)interruptTypesDidChange {
     if (self.interruptTypes.count > 0) {
         self.interruptInfo.interrupted = YES;

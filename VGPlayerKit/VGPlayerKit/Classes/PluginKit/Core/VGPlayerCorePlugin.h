@@ -13,7 +13,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface VGPlayerCorePlugin : VGCorePlugin <VGNoNeed, VGSender<VGPlayerEvents> *, VGPlayerLayout *, VGPlayer *>
-
+@property (nonatomic, assign) BOOL interrupt;
 @end
 
 NS_ASSUME_NONNULL_END

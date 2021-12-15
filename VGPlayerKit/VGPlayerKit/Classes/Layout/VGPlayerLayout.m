@@ -9,11 +9,11 @@
 
 @implementation VGPlayerLayout
 
-- (void)installVideoView:(UIView *)videoView {
+- (void)install:(UIView *)component {
     
 }
 
-- (void)uninstallVideoView:(UIView *)videoView {
+- (void)uninstall:(UIView *)component {
     
 }
 

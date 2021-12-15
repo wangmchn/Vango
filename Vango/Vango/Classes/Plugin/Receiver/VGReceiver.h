@@ -25,11 +25,14 @@ NS_ASSUME_NONNULL_BEGIN
 ///        // do sth. 例如：
 ///        [receiver bar];
 ///     }
-/// })
+/// });
+/// VGReceiverObserve(VGXXXInfo, @"enabled", receiver.plugin.enabled = object.enabled);
 #define VGReceiverObserve(cls, keypath, execution) \
 self.sharedInfos.react(cls.class).subscribe(keypath, self, ^(id _Nonnull observer, cls * _Nonnull object, NSDictionary<NSString *,id> * _Nonnull change) { \
 __strong typeof(self) receiver = observer;\
+{\
 execution;\
+}\
 });
 
 @interface VGReceiver <__covariant PluginType> : NSObject

@@ -26,6 +26,12 @@ NS_ASSUME_NONNULL_BEGIN
 /// 播放器根视图
 @property (nonatomic, strong, readonly) UIView *view;
 
+- (void)play;
+
+- (void)pause;
+
+- (void)stop;
+
 @end
 
 NS_ASSUME_NONNULL_END

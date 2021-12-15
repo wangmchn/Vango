@@ -15,14 +15,29 @@
 
 - (void)inject:(VGPlayer *)core {
     core.delegate = self;
-    [self.layout installVideoView:core.view];
+    [self.layout install:core.view];
     [super inject:core];
+    [self interruptChanged];
 }
 
 - (void)remove:(VGPlayer *)core {
     core.delegate = nil;
-    [self.layout uninstallVideoView:core.view];
+    [self.layout uninstall:core.view];
     [super remove:core];
+    [self interruptChanged];
+}
+
+- (void)setInterrupt:(BOOL)interrupt {
+    _interrupt = interrupt;
+    [self interruptChanged];
+}
+
+- (void)interruptChanged {
+    if (self.interrupt) {
+        [self.core pause];
+    } else {
+        [self.core play];
+    }
 }
 
 @end

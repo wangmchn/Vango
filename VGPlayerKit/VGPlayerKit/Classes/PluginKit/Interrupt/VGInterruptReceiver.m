@@ -13,6 +13,7 @@
 typedef NS_ENUM(NSUInteger, VGInterruptType) {
     VGInterruptTypeCall,
     VGInterruptTypeVisibility,
+    VGInterruptTypeUserInteract,
 };
 
 @interface VGInterruptReceiver () <VGCoreEvents, CXCallObserverDelegate>

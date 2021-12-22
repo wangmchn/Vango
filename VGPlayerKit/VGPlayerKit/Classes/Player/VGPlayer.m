@@ -9,4 +9,16 @@
 
 @implementation VGPlayer
 
+- (void)play {
+    
+}
+
+- (void)pause {
+    
+}
+
+- (void)stop {
+    
+}
+
 @end

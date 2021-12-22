@@ -7,6 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import "VGSharedInfoSet.h"
+#import "VGCoreEvents.h"
 @class VGPlugin;
 
 NS_ASSUME_NONNULL_BEGIN
@@ -35,7 +36,7 @@ execution;\
 }\
 });
 
-@interface VGReceiver <__covariant PluginType> : NSObject
+@interface VGReceiver <__covariant PluginType> : NSObject <VGCoreEvents>
 /// The plugin which drive to react from events.
 @property (nonatomic, weak, readonly) PluginType plugin;
 /// A data center which shared informations from other plugins.

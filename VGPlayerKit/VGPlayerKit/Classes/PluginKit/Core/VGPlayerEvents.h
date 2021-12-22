@@ -11,7 +11,9 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @protocol VGPlayerEvents <VGCoreEvents>
-@required
+
+
+
 @end
 
 NS_ASSUME_NONNULL_END

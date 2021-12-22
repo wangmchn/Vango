@@ -16,7 +16,7 @@ typedef NS_ENUM(NSUInteger, VGInterruptType) {
     VGInterruptTypeUserInteract,
 };
 
-@interface VGInterruptReceiver () <VGCoreEvents, CXCallObserverDelegate>
+@interface VGInterruptReceiver () <CXCallObserverDelegate>
 @property (nonatomic, strong) CXCallObserver *callObserver;
 @end
 

@@ -23,6 +23,8 @@ NS_ASSUME_NONNULL_BEGIN
 /// 播放器是否在 loading
 @property (nonatomic, assign, readonly) BOOL loading;
 
+@property (nonatomic, assign, readonly) BOOL playerInjected;
+
 @end
 
 NS_ASSUME_NONNULL_END

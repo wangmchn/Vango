@@ -7,6 +7,13 @@
 
 #import "VGPlayerLayout.h"
 
+@interface VGPlayerLayout ()
+@property (nonatomic, strong) UIView *contentView;
+@property (nonatomic, strong) UIView *topBar;
+@property (nonatomic, strong) UIView *bottomBar;
+@property (nonatomic, strong) UIView *centerBar;
+@end
+
 @implementation VGPlayerLayout
 
 - (void)install:(UIView *)component {

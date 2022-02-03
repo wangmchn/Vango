@@ -6,10 +6,11 @@
 //
 
 #import <Vango/VGLayout.h>
+#import "VGPlayerUIComponent.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface VGPlayerLayout : VGLayout
+@interface VGPlayerLayout : VGLayout <UIView<VGPlayerUIComponent> *>
 
 @end
 

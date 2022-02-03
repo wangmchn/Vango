@@ -17,6 +17,13 @@
     
 }
 
+- (BOOL)isInstalled:(UIView *)component {
+    if ([component isDescendantOfView:self.rootView]) {
+        return YES;
+    }
+    return NO;
+}
+
 - (void)layoutSubviews {
     
 }

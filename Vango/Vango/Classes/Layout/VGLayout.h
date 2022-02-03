@@ -16,6 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)install:(VGUIComponent)component;
 /// 卸载 UIComponent
 - (void)uninstall:(VGUIComponent)component;
+/// 是否已经 install
+- (BOOL)isInstalled:(VGUIComponent)component;
 /// 布局子视图
 - (void)layoutSubviews;
 

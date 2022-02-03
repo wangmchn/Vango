@@ -38,9 +38,6 @@ NS_ASSUME_NONNULL_BEGIN
 - (instancetype)init NS_UNAVAILABLE;
 + (instancetype)new NS_UNAVAILABLE;
 
-/// 设置 plugin 对应的 datasource
-- (void)setDataSource:(id)dataSource forPlugin:(Class)pluginClass;
-
 @end
 
 NS_ASSUME_NONNULL_END

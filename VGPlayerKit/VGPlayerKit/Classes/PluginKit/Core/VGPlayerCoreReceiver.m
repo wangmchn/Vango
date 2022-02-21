@@ -16,7 +16,7 @@
 }
 
 - (void)setUpReacts {
-    VGReceiverObserve(VGInterruptInfo, @"interrupted", receiver.plugin.interrupt = object.interrupted);
+    VGReceiverObserve(VGInterruptInfo, interrupted, receiver.plugin.interrupt = object.interrupted);
 }
 
 @end

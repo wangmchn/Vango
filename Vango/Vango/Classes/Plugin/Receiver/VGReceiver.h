@@ -29,7 +29,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// });
 /// VGReceiverObserve(VGXXXInfo, @"enabled", receiver.plugin.enabled = object.enabled);
 #define VGReceiverObserve(cls, keypath, execution) \
-self.sharedInfos.react(cls.class).subscribe(keypath, self, ^(id _Nonnull observer, cls * _Nonnull object, NSDictionary<NSString *,id> * _Nonnull change) { \
+self.sharedInfos.react(cls.class).subscribe(NSStringFromSelector(@selector(keypath)), self, ^(id _Nonnull observer, cls * _Nonnull object, NSDictionary<NSString *,id> * _Nonnull change) { \
 __strong typeof(self) receiver = observer;\
 {\
 execution;\

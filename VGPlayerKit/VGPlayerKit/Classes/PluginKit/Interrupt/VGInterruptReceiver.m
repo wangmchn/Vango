@@ -29,7 +29,7 @@ typedef NS_ENUM(NSUInteger, VGInterruptType) {
 
 #pragma mark - Private
 - (void)setUpReacts {
-    VGReceiverObserve(VGVisibilityInfo, @"isVisibile", {
+    VGReceiverObserve(VGVisibilityInfo, isVisible, {
         if (object.isVisible) {
             [receiver.plugin resume:VGInterruptTypeVisibility];
         } else {

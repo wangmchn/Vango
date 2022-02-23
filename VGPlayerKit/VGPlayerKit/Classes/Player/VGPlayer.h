@@ -14,19 +14,17 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-@protocol VGPlayer <NSObject>
-/// 代理回调
-@property (nonatomic, weak) id<VGPlayerDelegate> delegate;
-/// 播放器根视图
-@property (nonatomic, strong, readonly) UIView<VGPlayerUIComponent> *view;
+@interface VGPlayer : NSObject
 /// 总时长
 @property (nonatomic, assign, readonly) NSTimeInterval duration;
 /// 当前播放时长
 @property (nonatomic, assign, readonly) NSTimeInterval playedTime;
 /// 缓存的时长
 @property (nonatomic, assign, readonly) NSTimeInterval cachedTime;
-/// 报错信息
-@property (nonatomic, strong, readonly) NSError *error;
+/// 代理回调
+@property (nonatomic, weak) id<VGPlayerDelegate> delegate;
+/// 播放器根视图
+@property (nonatomic, strong, readonly) UIView *view;
 
 - (void)play;
 

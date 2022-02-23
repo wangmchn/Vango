@@ -17,4 +17,8 @@
     return self;
 }
 
+- (void)updateDataSource:(id)dataSource {
+    _dataSource = dataSource;
+}
+
 @end

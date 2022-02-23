@@ -13,14 +13,14 @@
 
 @implementation VGPlayerCorePlugin
 
-- (void)inject:(id<VGPlayer>)core {
+- (void)inject:(VGPlayer *)core {
     core.delegate = self;
     [self.layout install:core.view];
     [super inject:core];
     [self interruptChanged];
 }
 
-- (void)remove:(id<VGPlayer>)core {
+- (void)remove:(VGPlayer *)core {
     core.delegate = nil;
     [self.layout uninstall:core.view];
     [super remove:core];

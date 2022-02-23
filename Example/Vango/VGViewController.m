@@ -10,8 +10,16 @@
 #import <Vango/VGSharedInfoSet.h>
 #import "VGTestObj.h"
 
-@interface VGViewController ()
+@class Player;
 
+@protocol TestDelegate <NSObject>
+
+- (void)player:(Player *)player didTimeUpdate:(NSTimeInterval)time duration:(NSTimeInterval)duration;
+
+@end
+
+@interface VGViewController ()
+@property (nonatomic, weak) id<TestDelegate> delegate;
 @end
 
 @implementation VGViewController
